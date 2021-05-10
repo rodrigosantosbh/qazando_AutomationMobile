@@ -1,0 +1,17 @@
+{
+  "name": "qazando-automation",
+  "version": "1.0.0",
+  "description": "Projeto de Testes automatizados qazando",
+  "main": "index.js",
+  "scripts": {
+    "android": "codeceptjs run -c codecept.conf.js --override '{\"helpers\": {\"Appium\": {\"platform\": \"Android\", \"app\": \"C:/Users/rodri/qazando-automation/app/android/app-release.apk\", \"desiredCapabilities\": { \"appPackage\": \"com.qazandoapp\", \"appActivity\": \"MainActivity\", \"devicename\": \"Pixel\", \"platformVersion: \"9\",}}}} '",
+    "ios": "codeceptjs run -c codecept.conf.js --override '{\"helpers\": {\"Appium\": {\"platform\": \"iOS\", \"app\": \"C:/Users/rodri/qazando-automation/app/iOS/qazandoapp.app\", \"desiredCapabilities\": { \"devicename\": \"iPhone 11\", \"platformVersion: \"14.4.1\",}}}} '",
+    "test": "npx codeceptjs run --steps"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.0.6",
+    "webdriverio": "^7.3.0"
+  }
+}
